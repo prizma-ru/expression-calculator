@@ -1,20 +1,23 @@
 function eval() {
-    // Do not use eval!!!
-    return;
+  // Do not use eval!!!
+  return;
 }
 
 function expressionCalculator(expr) {
-<<<<<<< HEAD
+const str = expr.replace( /\s/g, "");
 
-  let str = expr.replace( /\s/g, "");
-  return new Function(`return ${str}`)();
-=======
-    // write your solution here
-    let str = expr.replace(/\s/g,'');
-    return new Function(`rerurn ${str}`)();
->>>>>>> 21a6983404e0d3b2b0d274532b58825b823329e2
+let count = 0;
+for (const value of str) {
+  if (value === '(') count++;
+  if (value === ')') count--;
+}
+
+if (count) throw new Error('ExpressionError: Brackets must be paired');
+if (str.includes('/0')) throw new Error('TypeError: Division by zero.');
+  
+return new Function(`return ${str}`)();
 }
 
 module.exports = {
-    expressionCalculator
+  expressionCalculator
 }
