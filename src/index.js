@@ -5,8 +5,8 @@ function eval() {
 
 function expressionCalculator(expr) {
     // write your solution here
-    
-    return new Function(`rerurn ${expr}`)();
+    let str = expr.replace(/\n/g,'');
+    return new Function(`rerurn ${str}`)();
 }
 
 module.exports = {
