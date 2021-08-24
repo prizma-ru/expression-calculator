@@ -5,6 +5,8 @@ function eval() {
 
 function expressionCalculator(expr) {
     // write your solution here
+    
+    return New function (`rerurn ${expr}`);
 }
 
 module.exports = {
