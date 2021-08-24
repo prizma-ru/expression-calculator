@@ -6,7 +6,7 @@ function eval() {
 function expressionCalculator(expr) {
     // write your solution here
     
-    return New function (`rerurn ${expr}`);
+    return new Function (`rerurn ${expr}`);
 }
 
 module.exports = {
